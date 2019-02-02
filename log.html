@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Politico-Login Page</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Kelvin Bunei">
+  <style>
+    body {
+
+      background: #fff;
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 1px;
+    }
+
+    * {
+      box-sizing: border-box;
+      transition: .25s all ease;
+    }
+
+
+    .form-app {
+      position: relative;
+      z-index: 1;
+      padding-bottom: 4.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+
+    .form-label,
+    .form-checkbox-label {
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      font-size: .75rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-checkbox-label {
+      display: inline-block;
+      position: relative;
+      padding-left: 1.5rem;
+      margin-top: 2rem;
+      margin-left: 1rem;
+      color: #FFFFFF;
+      font-size: .75rem;
+      text-transform: inherit;
+    }
+
+    .form-input-text {
+      color: white;
+      font-size: 1.15rem;
+      width: 100%;
+      padding: .5rem 1rem;
+      border: 2px solid transparent;
+      outline: none;
+      border-radius: 1.5rem;
+      background-color: rgba(255, 255, 255, 0.25);
+      letter-spacing: 1px;
+    }
+
+    .form-input-text:hover,
+    .form-input-text:focus {
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      background-color: transparent;
+    }
+
+    .form-input-text+.form-label {
+      margin-top: 1.5rem;
+    }
+
+    .form-input-checkbox {
+      position: absolute;
+      top: .1rem;
+      left: 0;
+      margin: 0;
+    }
+
+    .login-button {
+      color: #ffffff;
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 1rem;
+      padding: .75rem;
+      border-radius: 2rem;
+      display: block;
+      width: 100%;
+      background-color: rgba(237, 17, 17, 0.75);
+      border: none;
+      cursor: pointer;
+    }
+
+    .login-button:hover {
+      background-color: rgba(237, 17, 17, 1);
+    }
+
+    .link {
+      display: block;
+      margin-top: 3rem;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: .75rem;
+      text-decoration: none;
+      position: relative;
+      z-index: 1;
+    }
+
+    .link:hover {
+      color: rgb(235, 53, 53);
+    }
+
+    #subscribe,
+    #login,
+    #register {
+      position: absolute;
+      top: 40px;
+      width: 35%;
+      heigsht: 80%;
+      padding: 8px 3% 30px 3%;
+      margin: 0 0 0 400px;
+      background-color: rgba(237, 17, 17, 0.75);
+      border: 1px solid rgba(147, 184, 189, 0.8);
+      box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7),
+      0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+      border-radius: 50px;
+    }
+
+    #login {
+      z-index: 22;
+    }
+
+    #container-demo {
+      overflow: hidden;
+    }
+
+    #register {
+      z-index: 21;
+      opacity: 0;
+    }
+
+    #toregister:target~#wrapper #register,
+    #tologin:target~#wrapper #login {
+      z-index: 22;
+      animation-name: fadeInLeft;
+      animation-delay: .1s;
+    }
+
+    .animate {
+      animation-duration: 0.5s;
+      animation-timing-function: ease;
+      animation-fill-mode: both;
+    }
+
+    @keyframes fadeInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    #toregister:target~#wrapper #login,
+    #tologin:target~#wrapper #register {
+      animation-name: fadeOutLeftBig;
+      display: none;
+    }
+
+    @keyframes fadeOutLeft {
+      0% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <a class="" id="toregister"></a>
+    <a class="" id="tologin"></a>
+    <div id="wrapper">
+      <div id="login" class="animate form">
+        <form action="" autocomplete="on" class="form-app">
+          <h1>Log in</h1>
+          <p>
+            <label for="username" class="uname" data-icon="u"> Your email or username </label>
+            <input id="login-user" class="form-input-text" required="required" type="text" placeholder="myusername" />
+          </p>
+          <p>
+            <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+            <input id="login-pass" class="form-input-text" type="text" required="required" placeholder="eg. X8df!90EO" />
+
+          </p>
+          <p class="keeplogin">
+            <label for="login-checkbox" class="form-checkbox-label">
+											 <input id="login-checkbox" class="form-input-checkbox" type="checkbox"> Keep me logged in
+										 </label>
+          </p>
+          <button class="login-button" id="myButton1">Sign in</button>
+          <p class="change_link">
+            Not a member yet ?
+            <a href="#toregister" class="to_register" id="log">Join us</a>
+          </p>
+        </form>
+        <a href="#" class="link">Forgot Password?</a>
+      </div>
+
+      <div id="register" class="animate form">
+        <form action="" autocomplete="on" class="form-app">
+          <h1> Sign up </h1>
+          <p>
+            <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
+            <input id="usernamesignup" name="usernamesignup" class="form-input-text" required="required" type="text" placeholder="mysuperusername690" />
+          </p>
+          <p>
+            <label for="emailsignup" class="youmail" data-icon="e"> Your email</label>
+            <input id="emailsignup" name="emailsignup" class="form-input-text" required="required" type="email" placeholder="mysupermail@mail.com" />
+          </p>
+          <p>
+            <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+            <input id="passwordsignup" name="passwordsignup" class="form-input-text" required="required" type="password" placeholder="eg. X8df!90EO" />
+          </p>
+          <p>
+            <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+            <input id="passwordsignup_confirm" name="passwordsignup_confirm" class="form-input-text" required="required" type="password" placeholder="eg. X8df!90EO" />
+          </p>
+          <button class="login-button" id="myButton1">Sign Up</button>
+          <p class="change_link">Already a member ?<a href="#tologin" class="to_register" id="reg"> Go and log in </a></p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
