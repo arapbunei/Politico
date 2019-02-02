@@ -1,0 +1,50 @@
+.bg-orange {
+    background-color: #f9b000;
+    color: #FFFFFF !important;
+}
+.bg-primary {
+    background-color: #117bf3;
+    color: #FFFFFF;
+}
+.bg-white {
+    background-color: white;
+    color: black
+}
+.bg-light-blue {
+    background-color: #f4f8fb;
+    color: #f9b000;
+}
+
+.bg-dark-blue {
+    background-color: #f4f8fb;
+    color:#f9b000;
+}
+
+.bg-black {
+    background-color: rgb(51, 49, 49);
+}
+.bg-whitesmoke {
+    background-color: whitesmoke !important;
+}
+.text-primary {
+    color: #117bf3;
+}
+
+.text-grey {
+    color: grey !important;
+}
+
+
+.text-white {
+    color: white !important;
+}
+
+.text-orange {
+    color: #fa5903 !important;
+}
+
+
+.active-text {
+    color: rebeccapurple !important;
+    font-weight: bold;
+}
