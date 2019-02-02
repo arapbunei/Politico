@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/css.css" type="">
+  <link rel="stylesheet" href="css/party.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/styled.css">
+  <script src="widget.js"></script>
+  <style>
+     
+      </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <div id="branding">
+        <h1 class="highlight">Politico</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><div class="dropdown">
+              <a class="dropbtn">Parties</a>
+              <div class="dropdown-content">
+              <a href="#">Create Party</a>
+              <a href="#">Edit party</a>
+              <a href="#">Delete party</a>
+              <a href="#">create political office</a>
+              </div>
+            </div></li>
+          <li><a href="../templates/profile.html">Profile</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+    <div class="hero">
+             
+      <div class="counter">
+          <span class="title" style="text-align:center;">Contenders</span>
+          <div class="center" style="text-align:center;">
+              
+                <p>A list of all contending politicians</p>
+                <button class="accordion">Bobi wine</button>
+                <div class="panel">
+                    <div class="container">
+                        <div id="div1">
+                            <label for="party-select">Position:</label>
+                            <select id="party-select">
+                              <option value="">--Please choose an option--</option>
+                              <option value="democrat">President</option>
+                              <option value="republican">Governor</option>
+                              <option value="independent">Senate</option>
+                            </select>
+                        </div>
+                        <div id="div2">
+                            <label for="party-select">Party:</label>
+                          <select id="party-select">
+                              <option value="">--Please choose an option--</option>
+                              <option value="democrat">Democrat</option>
+                              <option value="republican">Republican</option>
+                              <option value="independent">Independent</option>
+                            </select>
+                        </div>
+                        <div id="div3">
+                            <table class="text-center stats-box">
+                                <tr>
+                                  <td>
+                                    <span class="votes fadeIn">5</span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Votes</td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href=""><img class="" src="thumbs-up.svg" height="20px;" /></a>
+                                  </td>
+                                </tr>
+                              </table>
+                            
+                        </div>
+                      </div> 
+                    
+                </div>
+  
+                <button class="accordion">Yoweri Museveni</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+  
+                <button class="accordion">Kizza Besigye</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+          </div>
+        </div>
+        <div id="wrapper">
+            <div id="left">
+                <div class="counter">
+                    <span class="title" style="text-align:center;">Political parties</span>
+                    <div class="center" style="text-align:center;">
+                        
+                          <p>A list of all political parties.</p>
+                          <button class="accordion">Democrats</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                          </div>
+            
+                          <button class="accordion">Republicans</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                          </div>
+            
+                          <button class="accordion">Independent</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                          </div>
+                    </div>
+                  </div>
+            </div>    
+            <div id="right">
+                <div class="counter">
+                    <span class="title" style="text-align:center;">Political Offices</span>
+                    <div class="center" style="text-align:center;">
+                        
+                          <p>A list available political offices.</p>
+                          <button class="accordion">President</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                          </div>
+            
+                          <button class="accordion">Governor</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                          </div>
+            
+                          <button class="accordion">Senate</button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                          </div>
+                    </div>
+                  </div>
+            </div>
+          </div>  
+    </div>
+  </header>
+  <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight){
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        });
+      }
+      </script>
+      
+</body>
+
+</html>
