@@ -9,7 +9,7 @@ Getting started
 --------------------
 1. Clone this repository
 ```
-  https://github.com/exdus/Politico
+https://github.com/exdus/Politico
 ```
 
 2. Navigate to the cloned repository
