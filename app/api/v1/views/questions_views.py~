@@ -1,0 +1,28 @@
+from flask import jsonify, request
+from ...v1 import version_1 as v1
+from ..schemas.offices_schema import OfficeSchema
+from ..models.questions_model import Office
+
+db = Office()
+
+@v1.route('/office', methods=['POST'])
+def post_office():
+    """ Endpoint to post question """
+    meetup_data = request.get_json()
+
+    # No data has been provided
+    if not office_data:
+        return jsonify({'status': 400, 'alert': 'No data provided'}), 400
+
+    # Check if request is valid
+    data, errors = OfficeSchema().load(office_data)
+    if errors:
+        return jsonify({'status': 400, 'message' : 'Invalid data. Please fill all required fields', 'errors': errors}), 400
+
+    # Save question and return response
+    office = db.save(data)
+    result = OfficeSchema().dump(office).data
+    return jsonify({'status': 201, 'message': 'Office created successfully', 'data': result}), 201
+
+
+
