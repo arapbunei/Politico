@@ -1,6 +1,7 @@
 import unittest
 from flask import json
-from app import create_app
+from instance.config import app_config
+from app.api import create_app
 from app.api.v1.models.user_model import users
 
 
@@ -179,7 +180,8 @@ class TestUsers(unittest.TestCase):
 
         #self.assertEqual(res_2.status_code, 200)
         #self.assertEqual(data_2['status'], 200)
-        #self.assertEqual(data_2['message'], 'logg in successfully')
+        #
+        self.assertEqual(data_2['message'], 'logg in successfully')
 
     def test_login_when_no_username_provided(self):
         """ Test login with no username provided """
