@@ -11,7 +11,7 @@ def index():
     return jsonify({'status': 200, 'message': 'Welcome to Politico:'}), 200
 
 @v1.route('/signup', methods=['POST'])
-def user_signup():
+def signup():
     """ Function to register new user """
     json_data = request.get_json()
 
