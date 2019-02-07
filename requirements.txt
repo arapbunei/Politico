@@ -8,7 +8,6 @@ MarkupSafe==1.1.0
 Pillow==2.3.0
 PyJWT==1.7.1
 PyYAML==3.10
-Ubuntu-Make==17.3
 Werkzeug==0.14.1
 aniso8601==4.1.0
 apparmor==2.10.95
