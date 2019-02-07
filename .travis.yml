@@ -9,7 +9,7 @@ install:
 
 
 script:
-  - python3 -m pytest
+  - python -m pytest
 
 after_success:
   - coveralls
