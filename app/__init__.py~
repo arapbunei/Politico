@@ -3,6 +3,7 @@ from flask import Flask, jsonify
 from instance.config import app_config
 from app.api.v1.views.party_view import v1 as party_blueprint_v1
 from app.api.v1.views.offices_view import v1 as offices_blueprint_v1
+from app.api.v1.views.user_views import v1 as users_blueprint_v1
 
 
 
@@ -21,7 +22,7 @@ def create_app(config_name):
  # Register V1 Blueprints
     app.register_blueprint(party_blueprint_v1)
     app.register_blueprint(offices_blueprint_v1)
-   
+    app.register_blueprint(users_blueprint_v1)
    
 
     @app.errorhandler(404)
