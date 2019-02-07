@@ -87,7 +87,7 @@ def put(self,name):
             return party, 200
 
     party = {
-        "name":name',
+        "name":name,
         "hqaddress":args['hqaddress'],
         "logourl":args['logourl']
 
