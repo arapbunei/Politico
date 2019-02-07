@@ -1,7 +1,7 @@
 #### Badges
 
 [![Build Status](https://travis-ci.org/exdus/Politico.svg?branch=develop)](https://travis-ci.org/exdus/Politico)
-[![Coverage Status](https://coveralls.io/repos/github/<exdus>/<Politico>/badge.svg?branch=master)](https://coveralls.io/github/<exdus>/<Politico>?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/exdus/Politico/badge.svg?branch=develop)](https://coveralls.io/github/exdus/Politico?branch=develop)
 [![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/<exdus>/<Politico>)
 
 #### Politico
