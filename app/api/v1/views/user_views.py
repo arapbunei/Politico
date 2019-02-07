@@ -47,7 +47,7 @@ def user_signup():
 
 
 @v1.route('/signin', methods=['POST'])
-def user_signin():
+def signin():
     json_data = request.get_json()
 
     # Check if the request contains any data

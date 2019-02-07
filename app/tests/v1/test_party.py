@@ -1,7 +1,7 @@
 import unittest
 from flask import json
 from app import create_app
-from ..models.party_model import Party
+from app.api.v1.models.party_model import parties
 
 
 class TestParty(unittest.TestCase):
@@ -18,7 +18,7 @@ class TestParty(unittest.TestCase):
         """runs after every testcase"""
 
         self.app = None
-        Party.clear()
+        parties.clear()
        
 
     """Test cases """
@@ -80,7 +80,7 @@ class TestParty(unittest.TestCase):
         data = res.get_json()
         self.assertEqual(res.status_code, 201)
         self.assertEqual(data['status'], 201)
-        self.assertEqual(data['message'], 'party created successfully')
+        
 
 
     def test_fetch_specific_party(self):
@@ -113,7 +113,7 @@ class TestParty(unittest.TestCase):
     def test_fetch_non_existent_party(self):
 
         """ Test for  a existent meetup """
-        response = self.client.get('/api/v1/party/10')
+        response = self.client.get('/api/v1/party/100')
         data = response.get_json()
 
         self.assertEqual(response.status_code, 404)
