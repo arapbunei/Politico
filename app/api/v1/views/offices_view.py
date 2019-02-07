@@ -41,3 +41,4 @@ def specific_office(office_id):
     result = OfficeSchema(many=True).dump(partiess).data
     return jsonify({'status':200, 'data':result}), 200
 
+

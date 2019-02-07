@@ -13,9 +13,9 @@ class UserSchema(Schema):
     username = fields.Str(required=True, validate=(required))
     phone_number = fields.Str(required=True, validate=(required))
     email = fields.Email(required=True, validate=(email))
+    #passport_url = fields.Str(required=True, validate=(passport_url))
     password = fields.Str(required=True, validate=(password))
     registered_on = fields.DateTime(dump_only=True)
-    modified_on = fields.DateTime(dump_only=True)
     is_admin = fields.Bool(dump_only=True)
 
 

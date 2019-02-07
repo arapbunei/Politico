@@ -3,6 +3,7 @@ from ...v1 import version_1 as v1
 from ..schemas.party_schema import PartySchema
 from ..models.party_model import Party
 from flask_jwt_extended import (jwt_required, get_jwt_identity)
+from flask_restful import Api,Resource,reqparse
 
 db = Party()
 
@@ -59,34 +60,40 @@ def delete_party(party_id):
     db.delete(party_id)
     return jsonify({'status':200, 'message': 'Party deleted successfully'}), 200
 
-@v1.route('/party/<int:party_id>', methods=['PUT'])
-def put():
-        """editing a single party based on id"""
-        for party in parties:
-            if party['id'] == id:
-                req = request.get_json()
-                party['name'] = req['name']
-                party['hqaddress'] = req['hqaddress'],
-                party['logourl']=req['logourl']
-                
-                return make_response(jsonify({
-                    "msg": "ok",
-                    "party": party
-                }), 200)
+@v1.route('/party/<int:party_id>/name', methods=['PATCH'])
+def edit_party(party_id):
+    """ Endpoint to edit party name """
 
-            updated_party = {
-                "id": id,
-                "name": req['name'],
-                "hqaddress": req['hqaddress'],
-                "logourl":req['logourl']
-               
-            }
-            parties.append(updated_party)
+  
+    if not db.exists('id', party_id):
+        return jsonify({'status': 404, 'message': 'Party not found'}), 404
 
-            return make_response(jsonify({
-                "msg": "ok",
-                "party": party
-            }), 201)
+    #edit office and return response
+    party = db.edit(party_id)
+    result = PartySchema().dump(party)
+    return jsonify({'status': 200, 'message': 'Name changed successfully', 'data': result}), 200
+@v1.route('/party/<int:party_id>/name', methods=['PATCH'])
+def put(self,name):
+    parser = reqparse.RequestParser()
+    parser.add_argument("hqaddress")
+    parser.add_argument("logourl")
+    args = parser.parse_args()
+
+    for party in parties:
+        if(name == party['name']):
+            party['name'] = name
+            party['hqaddress'] = args['hqaddress']
+            party['logourl'] = args['logourl']
+            return party, 200
+
+    party = {
+        "name":name',
+        "hqaddress":args['hqaddress'],
+        "logourl":args['logourl']
+
+    }
+    parties.append(party)
+    return jsonify({'status': 200, 'message': 'Name changed successfully'}), 200
 
 
 
