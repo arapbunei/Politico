@@ -48,7 +48,7 @@ Installation
 Run the application
 ---------------------------------
 ```
-    python3 run.py
+    python run.py
 ```
 Test the following api endpoints using postman
 -----------------------------------------------
