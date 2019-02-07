@@ -1,5 +1,6 @@
-# Politico
+[![Build Status](https://travis-ci.org/exdus/Politico.svg?branch=develop)](https://travis-ci.org/exdus/Politico)
 
+# Politico
 
 Politico is a platform which both the politicians and citizens can use. It enables citizens give their mandate to politicians running for different government offices while building trust in the process through transparency. 
 
