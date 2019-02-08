@@ -57,16 +57,16 @@ Test the following api endpoints using postman
 
 | Endpoint | Functionality |
 ----------|---------------
-/api/v1/party             | POST    |Create a party record
-/api/v1/party/<party_id>  | GET     |Fetch a specific party record
-/api/v1/party/<party_id>  | PATCH   |Edit a given party record
-/api/v1/party/<party_id>  | DELETE  |delete a specific party record
-/api/v1/parties           | GET	    |Fetch all party records
-/api/v1/office            | POST    |Create a political office 
-/api/v1/office/<office_id>| GET     |get specific office details
-/api/v1/ offices          | GET	    |View all political offices
-/api/v1/signup            | POST    |sign up for an account
-/api/v1/signin            | GET     |sign in to the api
+/api/v1/party             | POST    |Create a party record |
+/api/v1/party/<party_id>  | GET     |Fetch a specific party record|
+/api/v1/party/<party_id>  | PATCH   |Edit a given party record|
+/api/v1/party/<party_id>  | DELETE  |delete a specific party record|
+/api/v1/parties           | GET	    |Fetch all party records|
+/api/v1/office            | POST    |Create a political office |
+/api/v1/office/<office_id>| GET     |get specific office details|
+/api/v1/ offices          | GET	    |View all political offices|
+/api/v1/signup            | POST    |sign up for an account|
+/api/v1/signin            | GET     |sign in to the api|
 
 
 	

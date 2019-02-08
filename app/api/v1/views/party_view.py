@@ -1,4 +1,4 @@
-from flask import jsonify, request,abort,make_response
+from flask import Flask,jsonify, request,abort,make_response
 from ...v1 import version_1 as v1
 from ..schemas.party_schema import PartySchema
 from ..models.party_model import Party
