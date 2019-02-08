@@ -3,7 +3,7 @@ from ...v1 import version_1 as v1
 from ..schemas.party_schema import PartySchema
 from ..models.party_model import Party
 from flask_jwt_extended import (jwt_required, get_jwt_identity)
-from flask_restful import Api,Resource,reqparse
+from flask_restful import reqparse
 
 db = Party()
 
@@ -72,6 +72,7 @@ def edit_party(party_id):
     party = db.edit(party_id)
     result = PartySchema().dump(party)
     return jsonify({'status': 200, 'message': 'Name changed successfully', 'data': result}), 200
+    
 @v1.route('/party/<int:party_id>/name', methods=['PATCH'])
 def put(self,name):
     parser = reqparse.RequestParser()

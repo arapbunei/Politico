@@ -35,7 +35,7 @@ def get_offices():
 def specific_office(office_id):
    
     if not db.exists('id', office_id):
-        return  jsonify({'status': 404, 'error': 'party not found'}), 404
+        return  jsonify({'status': 404, 'error': 'office not found'}), 404
 
     partiess = db.fetch_by_id(office_id)
     result = OfficeSchema(many=True).dump(partiess).data

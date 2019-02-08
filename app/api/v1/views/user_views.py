@@ -8,7 +8,7 @@ db = User()
 @v1.route('/', methods=['GET'])
 @v1.route('/welcome', methods=['GET'])
 def index():
-    return jsonify({'status': 200, 'message': 'Welcome to Politico:'}), 200
+    return jsonify({'status': 200, 'message': 'Welcome to Politico. Kura Yako Sauti Yako'}), 200
 
 @v1.route('/signup', methods=['POST'])
 def signup():
