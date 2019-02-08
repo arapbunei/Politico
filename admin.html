@@ -1,72 +1,71 @@
-
-
 <html>
-    <head>
-        <title>Politico - Admin</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/st.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body >
-            <header>
-                    <div class="container">
-                        <div id="branding">
-                            <h1><i calss="fa fa-rocket"></i><span class="highlight">Politico</span></h1>
-                        </div>
-                        <nav>
-                            <ul>
-                                <li class="current"><a href="index.html">Home</a></li>
-                                <li><a href="party.html">Parties</a></li>
-                                <li><a href="profile.html">Profile</a></li>
-                                <li><a href="log.html">Login</a></li>
-                                <li><a href="log.html">Sign Up</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </header>    
-        <div class="container">
-                <div class=""> 
-                    <div class="pflpg"><br>
-                    <form>
-                        Political Party<br>
-                        <input class="form-control " type="text" id="title" name="title" placeholder="Title" />
-                      
-                        <input class="form-control" type="text" id="location" name="location" placeholder=chair person>
-                         <input class="form-control" type="text" id="location" name="location" placeholder=location>
-                        <input type="text" class="tag" id="tag" name="tag" placeholder="">
-                        <input type="file" name="image" ><br>
-                        <br>
-                        Comments<textarea></textarea>
-                        <button class="" type="submit" name="submit"> create</button>
-                         <button class="" type="submit" name="submit">Edit</button>
-                    </form>
-                </div>
-                <div class="meets">
-                    <form>
-                        Political Office<br>
-                        <input class="form-control " type="text" id="title" name="title" placeholder="Title" />
-                        <input class="form-control" type="text" id="location" name="location" placeholder=Qualifications>
-                        <input class="form-control" type="text" id="location" name="location" placeholder=Term of office>
-                        <input type="text" class="tag" id="tag" name="tag" placeholder="office holder">
-                        <input type="file" name="image" ><br>
-                        <br>
-                        Commennts<textarea></textarea>
-                        <button class="" type="submit" name="submit"> create</button>
-                    </form>
 
-                </div>
-            </div>
-            
-          
-        </div>
-        <ul class="blocks">
-            <li><b>Democratic</b><span>This is a national party<br><button class="" type="submit" name="submit">Delete</button></span></li>
-            <li><b>Republican</b><span>Regional party that has in a while<br><button class="" type="submit" name="submit">Delete</button></span></li>
-            <li><b>Liberterian</b><span>Our ideoligies are governed by<br><button class="" type="submit" name="submit">Delete</button></span></li>
-            <li><b>Independent</b><span>We do not have to belong to any party to serve people<br><button class="" type="submit" name="submit">Delete</button></span></li>
-          
+<head>
+  <title>Politico - Admin</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/st.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1><i calss="fa fa-rocket"></i><span class="highlight">Politico</span></h1>
+      </div>
+      <nav>
+        <ul>
+          <li class="current"><a href="index.html">Home</a></li>
+          <li><a href="party.html">Parties</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="log.html">Login</a></li>
+          <li><a href="log.html">Sign Up</a></li>
         </ul>
-    </body>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <div class="">
+      <div class="pflpg"><br>
+        <form>
+          Political Party<br>
+          <input class="form-control " type="text" id="title" name="title" placeholder="Title" />
+          <input class="form-control" type="text" id="location" name="location" placeholder="hqaddress">
+          <input class="form-control" type="text" id="location" name="location" placeholder="logo">
+          <input type="file" name="image"><br>
+          <br> Remarks
+          <textarea></textarea>
+          <button class="" type="submit" name="submit"> create</button>
+          <button class="" type="submit" name="submit">Edit</button>
+        </form>
+      </div>
+      <div class="meets">
+        <form>
+          Political Office<br>
+          <input class="form-control " type="text" id="id" name="title" placeholder="id" />
+          <input class="form-control" type="text" id="type" name="location" placeholder="type">
+          <input class="form-control" type="text" id="name" name="location" placeholder="name">
+          <input type="text" class="tag" id="tag" name="tag" placeholder="office holder">
+          <input type="file" name="image"><br>
+          <br> Remarks
+          <textarea></textarea>
+          <button class="" type="submit" name="submit"> create</button>
+        </form>
+
+      </div>
+    </div>
+
+
+  </div>
+  <ul class="blocks">
+    <li><b>Democratic</b><span><img src="./img/democrat.png" height="60px" class="" alt="democrat"><br>This is a national party<br><br><button class="" type="submit" name="submit">Delete</button></span></li>
+    <li><b>Republican</b><span><img src="./img/repbublican.png" class="" height="60px" alt="republican"><br>Regional party that has in a while<br><br><button class="" type="submit" name="submit">Delete</button></span></li>
+    <li><b>Liberterian</b><span><img src="./img/liberty.jpeg" class=""  height="60px" alt="liberty"><br>Our ideoligies are governed by<br><br><button class="" type="submit" name="submit">Delete</button></span></li>
+    <li><b>Independent</b><span><img src="./img/ind.jpeg" class="" height="60px" alt="independent"><br>We do not have to belong to any party to serve people<br><br><button class="" type="submit" name="submit">Delete</button></span></li>
+
+  </ul>
+</body>
+
 </html>
