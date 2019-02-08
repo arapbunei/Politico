@@ -13,7 +13,7 @@ def create_app(config_name):
 
     config_name = os.environ.get('FLASK_CONFIG', 'development')
     if not config_name:
-        config_name = "http://127.0.0.1:5000/api/v1/";
+        config_name = "http://127.0.0.1:5000/api/v1/"
 
     # Initialize app
     app = Flask(__name__, instance_relative_config=True)
