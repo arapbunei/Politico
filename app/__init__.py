@@ -1,6 +1,5 @@
 import os
 from flask import Flask, jsonify,make_response,request
-from flask_restful import Api
 from instance.config import app_config
 from app.api.v1.views.party_view import v1 as party_blueprint_v1
 from app.api.v1.views.offices_view import v1 as offices_blueprint_v1
@@ -17,6 +16,7 @@ def create_app(config_name):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(app_config[config_name])
     app.config.from_pyfile('config.py')
+   
 
  
  
