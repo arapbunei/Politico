@@ -72,7 +72,7 @@ Test the following api endpoints using postman
 	
 Contributors
 -----------------------------
-- Bunei
+- Bunei Kelvin
 
 
 
