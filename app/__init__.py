@@ -1,5 +1,6 @@
 import os
 from flask import Flask, jsonify,make_response,request
+from flask_restful import Api,Resource
 from instance.config import app_config
 from app.api.v1.views.party_view import v1 as party_blueprint_v1
 from app.api.v1.views.offices_view import v1 as offices_blueprint_v1
@@ -11,6 +12,8 @@ def create_app(config_name):
     """ Function to initialize Flask app """
 
     config_name = os.environ.get('FLASK_CONFIG', 'development')
+    if not config_name:
+        config_name = "http://127.0.0.1:5000/api/v1/";
 
     # Initialize app
     app = Flask(__name__, instance_relative_config=True)
