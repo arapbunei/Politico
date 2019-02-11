@@ -59,36 +59,23 @@ def delete_party(party_id):
     #delete parties 
     db.delete(party_id)
     return jsonify({'status':200, 'message': 'Party deleted successfully'}), 200
-
-@v1.route('/party/<int:party_id>/name', methods=['PATCH'])
-def edit_party(party_id):
-    """ Endpoint to edit party name """
-
-  
-    if not db.exists('id', party_id):
-        return jsonify({'status': 404, 'message': 'Party not found'}), 404
-
-    #edit office and return response
-    party = db.edit(party_id)
-    result = PartySchema().dump(party)
-    return jsonify({'status': 200, 'message': 'Name changed successfully', 'data': result}), 200
     
 @v1.route('/party/<int:party_id>/name', methods=['PATCH'])
 def put(self,name):
     parser = reqparse.RequestParser()
     parser.add_argument("hqaddress")
     parser.add_argument("logourl")
+    parser.add_argument("name")
     args = parser.parse_args()
 
     for party in parties:
-        if(name == party['name']):
-            party['name'] = name
-            party['hqaddress'] = args['hqaddress']
-            party['logourl'] = args['logourl']
+        if(id == party['party_id']):
+            party['name'] = args["name"]
+           
             return party, 200
 
     party = {
-        "name":name,
+        "name":args["name"],
         "hqaddress":args['hqaddress'],
         "logourl":args['logourl']
 
