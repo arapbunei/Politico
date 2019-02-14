@@ -6,6 +6,9 @@ from flask_jwt_extended import (jwt_required, get_jwt_identity)
 from flask_restful import reqparse
 
 db = Party()
+parser = reqparse.RequestParser()
+
+
 
 @v1.route('/party', methods=['POST'])
 def create_party():
@@ -60,28 +63,17 @@ def delete_party(party_id):
     db.delete(party_id)
     return jsonify({'status':200, 'message': 'Party deleted successfully'}), 200
     
-@v1.route('/party/<int:party_id>/name', methods=['PATCH'])
-def put(self,name):
-    parser = reqparse.RequestParser()
-    parser.add_argument("hqaddress")
-    parser.add_argument("logourl")
-    parser.add_argument("name")
-    args = parser.parse_args()
+@v1.route('/party/<int:party_id>/<string:name>', methods=['PATCH'])
+def edit_party(party_id,name):
+    if not db.exists('id', party_id):
+        return  jsonify({'status': 404, 'error': 'party not found'}), 404
 
-    for party in parties:
-        if(id == party['party_id']):
-            party['name'] = args["name"]
-           
-            return party, 200
+    parties = db.all()
+    for i in range(len(parties)):
+        parties[i]['name']==name
 
-    party = {
-        "name":args["name"],
-        "hqaddress":args['hqaddress'],
-        "logourl":args['logourl']
-
-    }
-    parties.append(party)
-    return jsonify({'status': 200, 'message': 'Name changed successfully'}), 200
+    return jsonify(200,"", [{"id" : party_id,"name" : name}]),200
 
 
 
+    

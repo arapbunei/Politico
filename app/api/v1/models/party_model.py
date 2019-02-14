@@ -37,10 +37,8 @@ class Party(object):
         part = [party for party in parties if party['id'] != id]
         return part
 
-    def edit(self, id):
+    def edit(self, name):
+         part = [party for party in parties if party['name'] == name]
+         part[0]['name'] = request.json['name']
+         return part
        
-        for party in parties:
-            if party['id'] == party_id:
-                party['name'] = party['name']
-
-            return party

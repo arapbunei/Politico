@@ -47,10 +47,16 @@ Installation
     pip install -r requirements.txt
 ```
 
-Run the application
+5. Run the application
 ---------------------------------
 ```
     python3 run.py
+```
+
+6. Test the application
+---------------------------------
+```
+    python3 -m pytest
 ```
 Test the following api endpoints using postman
 -----------------------------------------------
